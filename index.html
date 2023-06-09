@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image and Audio Processing</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">MUHAIMIN</div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="left-section">
+            <h1>Image Processing</h1>
+            <input type="file" id="imageInput">
+            <div>
+                <label for="newWidthInput">New Width:</label>
+                <input type="number" id="newWidthInput">
+            </div>
+            <div>
+                <label for="newHeightInput">New Height:</label>
+                <input type="number" id="newHeightInput">
+            </div>
+            <div>
+                <label for="rotateInput">Rotate:</label>
+                <input type="number" id="rotateInput" placeholder="Angle in degrees">
+            </div>
+            <div>
+                <label for="flipInput">Flip Horizontal:</label>
+                <input type="checkbox" id="flipInput">
+            </div>
+            <div>
+                <label for="brightnessInput">Brightness:</label>
+                <input type="number" id="brightnessInput" min="-100" max="100">
+            </div>
+            <div>
+                <label for="saturationInput">Saturation:</label>
+                <input type="number" id="saturationInput" min="-100" max="100">
+            </div>
+            <button onclick="resizeImage()">Resize</button>
+            <br>
+            <img id="previewImage" src="#" alt="Preview Image">
+        </div>
+        <div class="right-section">
+            <h1>Audio Processing</h1>
+            <input type="file" id="audioInput">
+            <div>
+              <label for="bitRateInput">Bit Rate (kbps):</label>
+              <input type="number" id="bitRateInput" min="1">
+            </div>
+            <div>
+              <label for="sampleRateInput">Sample Rate (Hz):</label>
+              <input type="number" id="sampleRateInput" min="1">
+            </div>
+            <div>
+                <label for="speedInput">Speed:</label>
+                <input type="number" id="speedInput" min="0.1" step="0.1" value="1">
+              </div>
+            <button onclick="compressAudio()">Compress</button>
+          </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; Muhammad Rahmat Muhaimin 2023. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
